@@ -8,29 +8,80 @@
     body { font-family: system-ui, -apple-system, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
     h1 { font-size: 1.6rem; }
     h2 { font-size: 1.2rem; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.5rem; }
     a { color: #1f4d4a; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid #ddd; }
+    th { font-size: 0.95rem; }
   </style>
 </head>
 <body>
   <h1>Politique de confidentialité — Rando Vacances</h1>
-  <p><em>Dernière mise à jour : 2026-05-29</em></p>
+  <p><em>Dernière mise à jour : 2026-08-08</em></p>
 
   <h2>Qui sommes-nous ?</h2>
-  <p>« Rando Vacances » est une application Android personnelle, distribuée en accès restreint à un cercle familial. Elle n'est pas commercialisée.</p>
+  <p>« Rando Vacances » est une application Android personnelle, distribuée en accès restreint à un cercle familial. Elle n'est pas commercialisée. Il n'y a ni compte, ni inscription, ni publicité.</p>
 
-  <h2>Données collectées</h2>
-  <p><strong>Aucune donnée n'est transmise à un serveur.</strong> L'application fonctionne entièrement hors-ligne.</p>
+  <h2>En résumé</h2>
+  <p>Le cœur de l'application (catalogue de randonnées, cartes, suivi de votre trace) fonctionne <strong>hors-ligne</strong> : ces données restent sur votre téléphone. En revanche, deux fonctionnalités ont besoin d'internet et transmettent alors des données à des services tiers : la <strong>Découverte</strong> de randonnées autour de vous, et l'envoi <strong>de rapports de plantage</strong>. Le détail est ci-dessous.</p>
+
+  <h2>Données stockées sur votre téléphone uniquement</h2>
   <ul>
-    <li><strong>Localisation GPS</strong> (précise, et en arrière-plan pendant une randonnée active) : utilisée uniquement pour afficher votre position sur la carte et enregistrer votre trace pendant la randonnée. Stockée localement sur votre téléphone, jamais envoyée à un tiers.</li>
-    <li><strong>Préférences d'affichage</strong> (thème, fond de carte choisi) : stockées localement.</li>
+    <li><strong>Localisation GPS</strong> (précise, et en arrière-plan pendant une randonnée active) : affiche votre position sur la carte et enregistre votre trace. Stockée localement.</li>
     <li><strong>Historique de vos randonnées et favoris</strong> : stockés localement dans la base de données de l'application.</li>
+    <li><strong>Préférences d'affichage</strong> (thème, fond de carte, filtres) : stockées localement.</li>
   </ul>
 
-  <h2>Données partagées avec des tiers</h2>
-  <p>Aucune.</p>
+  <h2>Données transmises à des tiers</h2>
 
-  <h2>Suppression des données</h2>
-  <p>Désinstaller l'application supprime l'intégralité des données (base de données, préférences, traces enregistrées).</p>
+  <h3>Fonctionnalité « Découverte » (nécessite internet)</h3>
+  <p>Quand vous cherchez des randonnées autour de vous ou d'une ville, l'application interroge des services de cartographie ouverts. Aucune de ces requêtes ne contient votre nom, votre adresse e-mail ni un identifiant de compte — l'application n'en possède aucun.</p>
+  <table>
+    <tr><th>Service</th><th>Ce qui est envoyé</th><th>Pourquoi</th></tr>
+    <tr>
+      <td>openrouteservice.org</td>
+      <td><strong>Votre position GPS précise</strong>, comme point de départ, ainsi que la destination</td>
+      <td>Calculer le temps de trajet en voiture jusqu'au départ d'une randonnée</td>
+    </tr>
+    <tr>
+      <td>overpass-api.de (OpenStreetMap)</td>
+      <td>Les coordonnées de la zone de carte que vous consultez</td>
+      <td>Trouver les sentiers présents dans cette zone</td>
+    </tr>
+    <tr>
+      <td>nominatim.openstreetmap.org</td>
+      <td>Le nom de ville que vous tapez</td>
+      <td>Convertir ce nom en coordonnées pour centrer la carte</td>
+    </tr>
+    <tr>
+      <td>api.open-elevation.com</td>
+      <td>Les coordonnées d'un tracé sélectionné</td>
+      <td>Calculer le profil d'altitude de la randonnée</td>
+    </tr>
+  </table>
+  <p>Ces services sont opérés par des tiers indépendants, chacun avec sa propre politique de confidentialité. Si vous n'utilisez pas la Découverte, aucune de ces requêtes n'est émise.</p>
+
+  <h3>Rapports de plantage (Firebase Crashlytics, Google)</h3>
+  <p>Pour corriger les bugs, l'application envoie un rapport à Firebase Crashlytics lorsqu'elle plante ou rencontre une erreur. Ce rapport contient la nature de l'erreur, l'endroit du code concerné, le modèle d'appareil, la version d'Android, la version de l'application et un identifiant d'installation généré par Firebase.</p>
+  <p>Ces rapports ne contiennent <strong>ni votre position, ni vos randonnées, ni vos favoris</strong>, et aucun identifiant personnel n'y est associé. Ils ne sont envoyés que par la version publiée de l'application.</p>
+
+  <h2>Ce que l'application ne fait pas</h2>
+  <ul>
+    <li>Aucune publicité, aucun traceur publicitaire, aucun outil de mesure d'audience.</li>
+    <li>Aucune vente ni cession de données.</li>
+    <li>Aucun compte, aucune inscription, aucune collecte de nom ou d'adresse e-mail.</li>
+    <li>Votre trace GPS enregistrée n'est jamais téléversée : elle ne quitte pas votre téléphone.</li>
+  </ul>
+
+  <h2>Durée de conservation et suppression</h2>
+  <p>Les données locales sont conservées jusqu'à ce que vous les supprimiez. Désinstaller l'application supprime l'intégralité des données locales (base de données, préférences, traces enregistrées).</p>
+  <p>Les rapports de plantage sont conservés par Firebase Crashlytics selon la politique de Google (environ 90 jours). Pour demander la suppression des rapports liés à votre appareil, écrivez à l'adresse ci-dessous.</p>
+
+  <h2>Enfants</h2>
+  <p>L'application ne cible pas les enfants.</p>
+
+  <h2>Modifications</h2>
+  <p>Cette page est mise à jour lorsque l'application change de comportement. La date en haut indique la dernière révision.</p>
 
   <h2>Contact</h2>
   <p>Tiffany Haumey — <a href="mailto:tiny99@free.fr">tiny99@free.fr</a></p>
