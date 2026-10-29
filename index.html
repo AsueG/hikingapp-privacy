@@ -17,13 +17,13 @@
 </head>
 <body>
   <h1>Politique de confidentialité — Rando Vacances</h1>
-  <p><em>Dernière mise à jour : 2026-08-08</em></p>
+  <p><em>Dernière mise à jour : 2026-10-29</em></p>
 
   <h2>Qui sommes-nous ?</h2>
   <p>« Rando Vacances » est une application Android personnelle, distribuée en accès restreint à un cercle familial. Elle n'est pas commercialisée. Il n'y a ni compte, ni inscription, ni publicité.</p>
 
   <h2>En résumé</h2>
-  <p>Le cœur de l'application (catalogue de randonnées, cartes, suivi de votre trace) fonctionne <strong>hors-ligne</strong> : ces données restent sur votre téléphone. En revanche, deux fonctionnalités ont besoin d'internet et transmettent alors des données à des services tiers : la <strong>Découverte</strong> de randonnées autour de vous, et l'envoi <strong>de rapports de plantage</strong>. Le détail est ci-dessous.</p>
+  <p>Le cœur de l'application (catalogue de randonnées, cartes, suivi de votre trace) fonctionne <strong>hors-ligne</strong> : ces données restent sur votre téléphone. En revanche, certaines fonctionnalités ont besoin d'internet et transmettent alors des données à des services tiers : la <strong>Découverte</strong> de randonnées autour de vous, le <strong>téléchargement des zones</strong> et la <strong>vérification des mises à jour</strong> via Google Play, et l'envoi <strong>de rapports de plantage</strong>. Le détail est ci-dessous.</p>
 
   <h2>Données stockées sur votre téléphone uniquement</h2>
   <ul>
@@ -44,6 +44,11 @@
       <td>Calculer le temps de trajet en voiture jusqu'au départ d'une randonnée</td>
     </tr>
     <tr>
+      <td>tile.openstreetmap.org (OpenStreetMap)</td>
+      <td>Les coordonnées des portions de carte affichées</td>
+      <td>Afficher le fond de carte de la Découverte</td>
+    </tr>
+    <tr>
       <td>overpass-api.de (OpenStreetMap)</td>
       <td>Les coordonnées de la zone de carte que vous consultez</td>
       <td>Trouver les sentiers présents dans cette zone</td>
@@ -60,6 +65,10 @@
     </tr>
   </table>
   <p>Ces services sont opérés par des tiers indépendants, chacun avec sa propre politique de confidentialité. Si vous n'utilisez pas la Découverte, aucune de ces requêtes n'est émise.</p>
+
+  <h3>Téléchargement des zones et mises à jour (Google Play)</h3>
+  <p>Les cartes et randonnées d'une zone sont téléchargées depuis Google Play (Play Asset Delivery). L'application demande aussi à Google Play si une version plus récente est publiée, afin de vous le signaler ; elle n'installe rien d'elle-même.</p>
+  <p>Ces échanges passent par l'application Google Play de votre téléphone et sont soumis à la politique de confidentialité de Google. Ils ne contiennent ni votre position, ni vos randonnées, ni vos favoris.</p>
 
   <h3>Rapports de plantage (Firebase Crashlytics, Google)</h3>
   <p>Pour corriger les bugs, l'application envoie un rapport à Firebase Crashlytics lorsqu'elle plante ou rencontre une erreur. Ce rapport contient la nature de l'erreur, l'endroit du code concerné, le modèle d'appareil, la version d'Android, la version de l'application et un identifiant d'installation généré par Firebase.</p>
